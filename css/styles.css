@@ -1,0 +1,22 @@
+html body {
+	background-image: url(../images/question_mark.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: 960px;
+}
+
+.container h1 {
+	font-family: "Domus";
+	font-weight: 800;
+}
+
+.container p {
+	font-family: "Tahoma";
+	margin-top: 1em;
+}
+
+#result {
+	font-size: 36px;
+	margin-top: 1em;
+	display: none;
+}
