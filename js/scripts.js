@@ -19,6 +19,8 @@ $(document).ready(function() {
         rows = (Math.floor(rootLength)) + 1;
     }
 
+    // Ex. Colmun count: 5, Row count: 4
+
     var origArray = [];
     var encryptArray = [];
     var letterCount = 0;
@@ -42,21 +44,37 @@ $(document).ready(function() {
       }
     }
 
-    // Function for clearing out any empty arrays
+    // Ex. When using the column/row count above, the array will display as...
 
+    // Row 1: [h,e,l,l,o]
+    // Row 2: [m,y,n,a,m]
+    // Row 3: [e,i,s,c,h]
+    // Row 4: [a,s,e, , ]
+
+    // Function for clearing out any empty arrays
     for (var i = 0; i < encryptArray.length; i++) {
       if (encryptArray[i] === "" ) {
         encryptArray.splice(i,1);
       }
     }
 
-    // Function for adding spaces in between each fifth element
+    // Ex. Grid without empty elements...
 
+    // Row 1: [h,e,l,l,o]
+    // Row 2: [m,y,n,a,m]
+    // Row 3: [e,i,s,c,h]
+    // Row 4: [a,s,e]
+
+    // Function for adding spaces in between each fifth element
     for (var i = 0; i < encryptArray.length; i++) {
       if ((i + 1) % 5 === 0) {
         encryptArray[i] = encryptArray[i] + " ";
       }
     }
+
+    // Ex. Final displayed message using every fifth element...
+
+    // "hoass emmce lyehl nia"
 
     var outputString = encryptArray.toString();
     outputString = outputString.replace(/[,]/g,'');
